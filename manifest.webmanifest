@@ -1,0 +1,15 @@
+{
+  "name": "Candy Pop",
+  "short_name": "Candy Pop",
+  "description": "A tiny pixel-art match-three game.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffb3d1",
+  "theme_color": "#ffb3d1",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

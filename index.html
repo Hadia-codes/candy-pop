@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Candy Pop</title>
+  <meta name="description" content="A tiny pixel-art match-three game.">
+  <meta name="theme-color" content="#ffb3d1">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <header class="top">
+      <h1>Candy Pop</h1>
+      <p class="best">Best level: <span id="best">1</span></p>
+    </header>
+
+    <section class="hud" aria-label="Game status">
+      <div class="px stat"><span class="label">Level</span><span class="value" id="level">1</span></div>
+      <div class="px stat"><span class="label">Score</span><span class="value" id="score">0</span></div>
+      <div class="px stat"><span class="label">Moves</span><span class="value" id="moves">20</span></div>
+    </section>
+
+    <section class="goal px" aria-label="Level goal">
+      <span class="label">Goal <b id="goal">600</b></span>
+      <div class="track"><div class="fill" id="bar"></div></div>
+    </section>
+
+    <div class="board-wrap px">
+      <canvas id="board" aria-label="Candy board"></canvas>
+      <div class="overlay" id="overlay" hidden>
+        <div class="px card">
+          <h2 id="ov-title">Level cleared!</h2>
+          <p id="ov-text"></p>
+          <button class="btn" id="ov-btn" type="button">Next level</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn" id="new" type="button">New game</button>
+      <button class="btn alt" id="mute" type="button" aria-pressed="false">Sound on</button>
+    </div>
+    <p class="help">Tap two neighbouring candies to swap them, or drag one. Line up three or more of the same.</p>
+  </main>
+
+  <script src="sprites.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
